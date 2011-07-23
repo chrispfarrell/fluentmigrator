@@ -138,7 +138,7 @@ namespace FluentMigrator.Tests.Integration
 					runner.Down(new TestIndexNamingConvention());
 					processor.IndexExists(null, "Users", "IX_Users_GroupId").ShouldBeFalse();
 					processor.TableExists(null, "Users").ShouldBeFalse();
-				});
+				}, false, typeof(SqliteProcessor));
 		}
 
         [Test]

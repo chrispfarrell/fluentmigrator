@@ -28,6 +28,7 @@ using NUnit.Should;
 
 namespace FluentMigrator.Tests.Integration.Processors
 {
+	[Ignore]
 	[TestFixture]
 	public class PostgresProcessorTests
 	{

@@ -17,6 +17,7 @@
 #endregion
 
 using System;
+using System.IO;
 
 namespace FluentMigrator.Console
 {
@@ -26,7 +27,18 @@ namespace FluentMigrator.Console
 		{
 			try
 			{
-				new MigratorConsole(args);
+				string [] myArgs = new string[6];
+				myArgs[0] = "/connection";
+				myArgs[1] =@"Data Source=C:\Projects\chrispfarrell-com\src\chrispfarrell.Web.MVC3\App_Data\fluentTest.sqlite;Version=3";
+
+				myArgs[2] = "/db";
+				myArgs[3] = "sqlite";
+
+				myArgs[4] = "/target";
+				myArgs[5] = @"C:\Projects\chrispfarrell-com\src\chrispfarrell.Database\bin\Debug\chrispfarrell.Database.dll";
+
+				new MigratorConsole(myArgs);
+				//new MigratorConsole(args);
 			}
 			catch (ArgumentException ex)
 			{

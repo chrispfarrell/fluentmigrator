@@ -5,7 +5,7 @@
 		public static DatabaseServerOptions SqlServer = new DatabaseServerOptions
 															{
 																ConnectionString =
-                                                                    @"server=.\SQLEXPRESS;uid=;pwd=;Trusted_Connection=yes;database=FluentMigrator",
+                                                                    @"server=localhost;uid=;pwd=;Trusted_Connection=yes;database=FluentMigrator",
 																IsEnabled = false
 															};
 
